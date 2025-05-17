@@ -46,7 +46,6 @@
             </div>
         </div>
     </nav>
-
     <!-- 主要內容 -->
     <main>
         <div class="container-fluid d-flex justify-content-center align-items-center text-bg-dark p-5">
@@ -54,6 +53,7 @@
                 <h3 class="mb-4">購物車</h3>
                 <!-- 進度條 -->
                 <div class="row justify-content-end mb-5">
+                    <!-- 排版用 -->
                     <div class="col-11">
                         <div class="row">
                             <div class="col position-relative">
@@ -62,11 +62,12 @@
                                         class="col-3 d-flex justify-content-center align-items-center my-progress-circle-wh rounded-circle text-bg-success">
                                         <b class="fs-5">1</b>
                                     </div>
+                                    <!-- 小於md隱藏，進度條顏色填滿待修正 -->
                                     <div class="col progress d-none d-md-flex mx-2">
                                         <div class="progress-bar bg-success" style="width: 50%"></div>
                                     </div>
-
                                 </div>
+                                <!-- 標題固定位置 -->
                                 <h5 class="position-absolute my-progress-title">確認購物車</h5>
                             </div>
 
@@ -79,7 +80,6 @@
                                     <div class="col progress d-none d-md-flex mx-2">
                                         <div class="progress-bar" style="width: 0%"></div>
                                     </div>
-
                                 </div>
                                 <h5 class="position-absolute my-progress-title">付款與運送方式</h5>
                             </div>
@@ -87,12 +87,11 @@
                                 <div class="row align-items-center mb-2">
                                     <div
                                         class="col-3 d-flex justify-content-center align-items-center my-progress-circle-wh rounded-circle my-progress-bg">
-                                        <b class="fs-5"b>3</b>
+                                        <b class="fs-5" b>3</b>
                                     </div>
                                     <div class="col progress d-none d-md-flex mx-2">
                                         <div class="progress-bar" style="width: 0%"></div>
                                     </div>
-
                                 </div>
                                 <h5 class="position-absolute my-progress-title">填寫資料</h5>
                             </div>
@@ -106,6 +105,69 @@
                                 <h5 class="position-absolute my-progress-title">完成訂購</h5>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <hr>
+                <h4 class="mb-4">訂單明細</h4>
+                <!-- 購物清單 -->
+                <div class="row align-items-center mb-2">
+                    <!-- 預覽圖片 -->
+                    <div class="my-w-75">
+                        <img src="./img/dummy/dummy200x200.jpg" class="my-w-75 rounded-circle" alt="訂單預覽">
+                    </div>
+
+                    <div class="row align-items-center my-order-w px-5">
+                        <!-- 商品名稱 & id -->
+                        <div class="col">
+                            <div class="h5">商品名稱</div>
+                            <div>#123456</div>
+                        </div>
+                        <!-- 購買數量 -->
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-outline-secondary" type="button" id="">-</button>
+                            <input type="number" class="my-w-50">
+                            <button class="btn btn-outline-secondary" type="button" id="">+</button>
+                        </div>
+                        <!-- 金額 -->
+                        <div class="col-2">1234</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row align-items-center mb-2">
+                    <div class="my-w-75">
+                        <img src="./img/dummy/dummy200x200.jpg" class="my-w-75 rounded-circle" alt="訂單預覽">
+                    </div>
+
+                    <div class="row align-items-center my-order-w px-5">
+                        <div class="col">
+                            <div class="h5">商品名稱</div>
+                            <div>#123456</div>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-outline-secondary" type="button" id="">-</button>
+                            <input type="number" class="my-w-50">
+                            <button class="btn btn-outline-secondary" type="button" id="">+</button>
+                        </div>
+                        <div class="col-2">1234</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row align-items-center mb-2">
+                    <div class="my-w-75">
+                        <img src="./img/dummy/dummy200x200.jpg" class="my-w-75 rounded-circle" alt="訂單預覽">
+                    </div>
+
+                    <div class="row align-items-center my-order-w px-5">
+                        <div class="col">
+                            <div class="h5">商品名稱</div>
+                            <div>#123456</div>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <button class="btn btn-outline-secondary" type="button" id="">-</button>
+                            <input type="number" class="my-w-50">
+                            <button class="btn btn-outline-secondary" type="button" id="">+</button>
+                        </div>
+                        <div class="col-2">1234</div>
                     </div>
                 </div>
                 <hr>

@@ -13,3 +13,14 @@
     color: white;
     background-color: #adb5bd;
 }
+
+.my-order-w{
+        width: calc(100% - 75px);
+}
+
+.my-w-75{
+    width: 75px;
+}
+.my-w-50{
+    width: 50px;
+}
