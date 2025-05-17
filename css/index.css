@@ -1,3 +1,15 @@
-.main-h{
-    height: calc(100vh - 86px);
+.my-progress-circle-wh {
+    width: 50px;
+    height: 50px;
+}
+
+.my-progress-title {
+    left: 25px;
+    top: 60px;
+    transform: translate(-50%, 0);
+}
+
+.my-progress-bg {
+    color: white;
+    background-color: #adb5bd;
 }
