@@ -15,10 +15,10 @@ document.querySelectorAll('.order').forEach(row => {
     // 初次載入
     updatePrice();
 
-    // 數量改變時 監聽
+    // 數量input改變時 總價顯示改變
     qtyInput.addEventListener('change', updatePrice);
 
-
+    //減按鈕 input.value改變 與 總價顯示改變
     minusBtn.addEventListener('click', function () {
         let value = parseInt(qtyInput.value) || 0; // parseInt() 字串轉成整數
         if (value > 0) {
@@ -27,7 +27,7 @@ document.querySelectorAll('.order').forEach(row => {
         }
     });
 
-
+    //加按鈕 input.value改變 與 總價顯示改變
     plusBtn.addEventListener('click', function () {
         let value = parseInt(qtyInput.value) || 0;
         if (value < 99) {
