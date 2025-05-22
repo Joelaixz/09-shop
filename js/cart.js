@@ -1,4 +1,10 @@
+// 金額運算顯示
+const showAmount = document.querySelector('#show-amount');
+const showSubtotal = document.querySelector('#show-subtotal');
+const showFare = document.querySelector('#show-fare');
+const showTotal = document.querySelector('#show-total');
 
+// 訂單明細渲染
 document.querySelectorAll('.order').forEach(row => {
     // 訂單(單價*數量)顯示
     const unitPrice = parseFloat(row.querySelector('.unitprice').dataset.unitprice); // 單價
@@ -7,7 +13,10 @@ document.querySelectorAll('.order').forEach(row => {
     // 金額加減按鈕
     const minusBtn = row.querySelector('.btn.minus');
     const plusBtn = row.querySelector('.btn.plus');
+    // 單價顯示
+    row.querySelector('.unitprice').textContent = `$${unitPrice}`;
 
+    // 更新個別訂單總價顯示
     function updatePrice() {
         priceShow.textContent = `總價:$ ${unitPrice * Number(qtyInput.value)}`;
     }
