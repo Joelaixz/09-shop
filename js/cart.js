@@ -1,8 +1,8 @@
 // 金額運算顯示
-const showAmount = document.querySelector('#show-amount');
-const showSubtotal = document.querySelector('#show-subtotal');
-const showFare = document.querySelector('#show-fare');
-const showTotal = document.querySelector('#show-total');
+const showAmount = document.querySelector('#show-amount'); // 數量
+const showSubtotal = document.querySelector('#show-subtotal'); // 小計
+const showFare = document.querySelector('#show-fare'); // 運費
+const showTotal = document.querySelector('#show-total'); // 總計
 
 // 訂單明細渲染
 document.querySelectorAll('.order').forEach(row => {
@@ -45,3 +45,16 @@ document.querySelectorAll('.order').forEach(row => {
         }
     });
 });
+
+// 更新金額運算顯示
+function updateTableShow() {
+    const inputs = document.querySelectorAll('input[type="number"]');
+    let sumAmount = 0;
+    inputs.forEach(input => {
+        sumAmount += Number(input.value);
+    });
+    showAmount.textContent = `${sumAmount}`; //數量
+}
+// 初始渲染
+updateTableShow();
+
