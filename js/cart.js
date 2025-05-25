@@ -4,6 +4,18 @@ const showSubtotal = document.querySelector('#show-subtotal'); // 小計
 const showFare = document.querySelector('#show-fare'); // 運費
 const showTotal = document.querySelector('#show-total'); // 總計
 
+// 更新金額運算顯示
+function updateTableShow() {
+    const inputs = document.querySelectorAll('input[type="number"]');
+    let sumAmount = 0;
+    inputs.forEach(input => {
+        sumAmount += Number(input.value);
+    });
+    showAmount.textContent = `${sumAmount}`; //數量
+}
+// 初始渲染
+updateTableShow();
+
 // 訂單明細渲染
 document.querySelectorAll('.order').forEach(row => {
     // 訂單(單價*數量)顯示
@@ -25,7 +37,10 @@ document.querySelectorAll('.order').forEach(row => {
     updatePrice();
 
     // 數量input改變時 總價顯示改變
-    qtyInput.addEventListener('change', updatePrice);
+    qtyInput.addEventListener('change', function () {
+        updatePrice();
+        updateTableShow();
+    });
 
     //減按鈕 input.value改變 與 總價顯示改變
     minusBtn.addEventListener('click', function () {
@@ -33,6 +48,7 @@ document.querySelectorAll('.order').forEach(row => {
         if (value > 0) {
             qtyInput.value = value - 1;
             updatePrice(); // 手動更新總價
+            updateTableShow();
         }
     });
 
@@ -42,19 +58,9 @@ document.querySelectorAll('.order').forEach(row => {
         if (value < 99) {
             qtyInput.value = value + 1;
             updatePrice();
+            updateTableShow();
         }
     });
 });
 
-// 更新金額運算顯示
-function updateTableShow() {
-    const inputs = document.querySelectorAll('input[type="number"]');
-    let sumAmount = 0;
-    inputs.forEach(input => {
-        sumAmount += Number(input.value);
-    });
-    showAmount.textContent = `${sumAmount}`; //數量
-}
-// 初始渲染
-updateTableShow();
 
