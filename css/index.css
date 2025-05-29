@@ -33,3 +33,26 @@
 .my-table-h {
     height: 250px;
 }
+
+.my-blank {
+    padding: 25px;
+}
+
+.card {
+    height: 500px;
+}
+
+.my-map-form {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media (max-width: 768px) {
+    .my-map-form {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
